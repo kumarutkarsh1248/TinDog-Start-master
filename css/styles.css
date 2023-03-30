@@ -1,3 +1,7 @@
+*{
+  transition-property: all;
+  transition-duration: 0.5s;
+}
 body{
   font-family: "Montserrat";
   font-weight: 100;
@@ -54,6 +58,26 @@ download buttons{
   transform: rotate(27deg);
 
 }
+@keyframes vibrate {
+  0%{
+    transform:rotate(30deg);
+  }
+  20%{
+    transform:rotate(3deg);
+    opacity:0.5;
+  }
+  50%{
+    transform:rotate(-20deg);
+    opacity:1;
+  }
+  100%{
+    transform:rotate(30deg);
+  }
+
+}
+.title-image:hover{
+  animation:vibrate 1000ms linear infinite;
+}
 /* feature */
 #features{
   padding: 10% 15%;
@@ -84,7 +108,13 @@ h3{
   border-radius: 100%;
   padding: 40px;
   width: 300px;
+  
 }
+.testimonial-image:hover{
+ filter:drop-shadow(0 0 15px black);
+  
+}
+
 .carousel-item{
   padding: 7% 15%;
 }
@@ -100,9 +130,9 @@ h3{
 /* cards */
 .card{
   margin: 10px 100px;
-  border: ;
-  border-width: px;
-  border-left-width: : px;
+  border: 0;
+  border-width: 0px;
+  border-left-width:  0px;
 }
 .pricing{
   text-align: center;
